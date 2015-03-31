@@ -12,16 +12,16 @@ def game( number_of_players, count_end )
 end
 
 def play( players_up, count_end )
-	until @count == count_end - 1
-	  players_up.rotate!
-	  @count += 1
-	  if @count % 7 == 0
-	  	players_up.reverse!
-	  elsif @count % 11 == 0
-	  	players_up.rotate!(2)
-	  end
-	end
-	pp "#{players_up.first} says #{count_end}"
+  until @count == count_end - 1
+    players_up.rotate!
+    @count += 1
+    if @count % 7 == 0
+      players_up.reverse!
+    elsif @count % 11 == 0
+      players_up.rotate!(2)
+    end
+  end
+  pp "#{players_up.first} says #{count_end}"
 end
 
 game( 17, 150 )
